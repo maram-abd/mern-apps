@@ -54,3 +54,39 @@ Docker Compose est utilisé pour gérer les différents services de l'applicatio
 
 5. Accédez au client à [http://localhost:3000](http://localhost:3000).
 
+
+
+
+##Etapes Tp
+
+## 1. Création des Dockerfiles
+- Dockerfile pour le serveur 
+- Dockerfile pour le client 
+
+## 2. Construction des images 
+- Image pour le serveur
+  - Commande : `docker build -t mern-server ./server`
+- Image pour le client
+  - Commande : `docker build -t mern-client ./client`
+
+## 3. Création du réseau 
+  - Commande : `docker network create mern-network`
+
+## 4. Lancement  des conteneurs
+- Conteneur MongoDB
+  - Commande : `docker run -d --name mongodb --network mern-network mongo`
+- Conteneur serveur 
+  - Commande : `docker run -d --name server --network mern-network -p 9000:9000 mern-server`
+- Conteneur client 
+  - Commande : `docker run -d --name client --network mern-network -p 3000:3000 mern-client`
+
+## 5. Création du Docker Compose
+- Fichier docker-compose.yml
+- Configuration des 3 services
+- Définition du réseau
+
+## 7. Lancement Docker Compose
+- Lancement de l'application complète
+  - Commande : `docker-compose up --build`
+- Vérification des services
+  - Commande : `docker-compose ps`
