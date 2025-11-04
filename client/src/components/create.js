@@ -28,7 +28,7 @@ export default function Create() {
         })
 
         if (!response.ok) {
-            const message = `An error occurred: ${response.statusText}`
+            const message = `An errorrrr occurred: ${response.statusText}`
             window.alert(message)
             return
         }
