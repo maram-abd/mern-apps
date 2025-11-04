@@ -48,7 +48,19 @@ pipeline {
                     '''
                 }
             }
+			
         }
+		
+		stage('Security Scan') {
+             steps {
+              sh '''
+             docker run --rm -v /var/run/docker.sock:/var/run/docker.sock \\
+             aquasec/trivy image maram02025/mern-server:${BUILD_NUMBER} > trivy_report.txt
+             echo "=== RAPPORT TRIVY COMPLET ==="
+            cat trivy_report.txt
+            '''
+           }
+       }
     }
     post {
         always {
