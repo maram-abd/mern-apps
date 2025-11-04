@@ -30,7 +30,7 @@ module.exports = {
   closeMongoDB: async function () {
     try {
       await client.close();
-      console.log("MongoDB connection closed.");
+      console.log("MongoDB connection closed...");
     } catch (error) {
       console.error("Error closing MongoDB connection:", error);
     }
