@@ -17,7 +17,7 @@ const dbo = require("./db/conn");
 
 dbo.connectToMongoDB(function (error) {
   if (error) throw error;
-console.log("the server is running");
+console.log("the server is running...");
 });
 app.listen(port, () => {
   console.log("Server is running on port: " + port);

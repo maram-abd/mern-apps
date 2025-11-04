@@ -54,7 +54,7 @@ export default function Edit() {
         })
 
         if (!response.ok) {
-            const message = `An error occurred: ${response.statusText}`
+            const message = `An errorrr occurred: ${response.statusText}`
             window.alert(message)
             return
         }
