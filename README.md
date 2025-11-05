@@ -90,3 +90,15 @@ Docker Compose est utilisé pour gérer les différents services de l'applicatio
   - Commande : `docker-compose up --build`
 - Vérification des services
   - Commande : `docker-compose ps`
+  
+  
+  #tp4 etapes
+  
+   creation des images Docker 
+   Création du ConfigMap 
+   Déploiement MongoDB 
+   Déploiement du serveur 
+   Déploiement du client 
+   Tester la communication entre les services
+   Scaling :augmenter le nbr de replicas de 3 à 5 
+   Mise à jour client-deployment: modifier la version de l'image utilisée
