@@ -1,0 +1,19 @@
+replicaCount: 2
+
+image:
+  repository: arijzrelli/mern-server
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 5000
+
+env:
+  - name: MONGO_URI
+    value: "mongodb://mern-app-mongodb:27017/mern-app"
+  - name: PORT
+    value: "5000"
+
+ingress:
+  enabled: false
